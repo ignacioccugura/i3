@@ -37,6 +37,10 @@ function fontsConfig(){
 	fi
 }
 
+function rangerConfig(){
+	"Configuring ranger..."
+	cp -r ../Configs/ranger ~/.config/ranger
+}
 function main(){
 	echo "============================================="
 	echo "Programs are going to configure themselves!!!"
@@ -46,6 +50,7 @@ function main(){
 	i3blocksConfig
 	exaConfig
 	fontsConfig
+	rangerConfig
 }
 
 main
