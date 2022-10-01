@@ -225,4 +225,6 @@ for_window [class="^.*"] border pixel 2
 exec_always compton -f
 #Establezco atajo de spotify
 bindsym $mod+Shift+s exec flatpak run com.spotify.Client
+#Touchpad
+exec_always xinput --set-prop 11 322 1
 exec --no-startup-id xdg-user-dirs-update
