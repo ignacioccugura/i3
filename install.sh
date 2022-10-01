@@ -20,8 +20,8 @@ function installations(){
 }
 
 function extra(){
-	sh ../ExtraScripts/extraConfigurations.sh
-	sh ../ExtraScripts/extraInstallations.sh
+	sh ExtraScripts/extraConfigurations.sh
+	sh ExtraScripts/extraInstallations.sh
 }
 
 function main(){

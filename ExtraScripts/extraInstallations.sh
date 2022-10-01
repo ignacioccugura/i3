@@ -1,10 +1,11 @@
 #!/bin/bash
+s_null=/dev/null
 function flatpakInst(){
-	sudo dnf install flatpak -y &> /dev/null
-  	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &> /dev/null
+	sudo dnf install flatpak -y &> $s_null
+  	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &> $s_null
 }
 
-function oh-my-zshInst(){
+function ohmyzshInst(){
 	echo "Installing oh-my-zsh..."
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
@@ -44,9 +45,9 @@ function main(){
 	echo "Some programs are going to install themselves!!!"
 	echo "================================================"
 	flatpakInst
-	oh-my-zshInst
 	spotifyInst
 	vscodeInst
+	ohmyzshInst
 }
 
 main
